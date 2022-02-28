@@ -6,7 +6,7 @@ eateries = ['Seattle Sticky Menu Diner', 'Seattle Mama Mia Italian Ristorante', 
 
 modes = ['The Batmobile (Seattle)', 'Tauntaun (Seattle)', 'The USS Enterprise (Seattle)', 'TARDIS (Seattle)', 'That Huge Flying Dog-Thing From The Neverending Story(Seattle)','The Batmobile(LA)', 'Tauntaun(LA)', 'The USS Enterprise(LA)', 'TARDIS(LA)', 'That Huge Flying Dog-Thing From The Neverending Story(LA)', 'The Batmobile(LV)', 'Tauntaun(LV)', 'The USS Enterprise(LV)', 'TARDIS(LV)', 'That Huge Flying Dog-Thing From The Neverending Story(LV)','The Batmobile(Milwaukee)', 'Tauntaun(Milwaukee)', 'The USS Enterprise(Milwaukee)', 'TARDIS(Milwaukee)', 'That Huge Flying Dog-Thing From The Neverending Story(Milwaukee)','The Batmobile(NY)', 'Tauntaun(NY)', 'The USS Enterprise(NY)', 'TARDIS(NY)', 'That Huge Flying Dog-Thing From The Neverending Story(NY)']
 
-shows = ['Wyld Stallyns', 'Sonic Death Monkey', 'Scrantonicity', 'Uptown Girl: An 80s Joel Experience', 'Drive Shaft', 'Here Comes Treble', 'The Beets', 'This Is Spinal Tap', 'Timmy and the Lords of the Underworld', 'Dewey Cox', 'Scrantonicity II', 'Zack Attack', 'The Oneders', 'Vesuvius', 'Autobahn', 'The Commitments', 'Kathleen Turner Overdrive', 'The Rutles', 'Chris Gaines', 'Sparkle Nation', 'Limozeen', 'Dethklok', 'Scull Soup', 'Poverty Bomb', 'Blighted Daybreaker', 'Nerve Endings', 'Vespers']
+shows = ['Wyld Stallyns', 'Sonic Death Monkey', 'Scrantonicity', 'Uptown Girl: An 80s Joel Experience', 'Drive Shaft', 'Here Comes Treble', 'The Beets', 'This Is Spinal Tap', 'Timmy and the Lords of the Underworld', 'Dewey Cox', 'Scrantonicity II', 'Zack Attack', 'The Oneders', 'Vesuvius', 'Autobahn', 'The Commitments', 'Kathleen Turner Overdrive', 'The Rutles', 'Chris Gaines', 'Sparkle Nation', 'Limozeen', 'Dethklok', 'Scull Soup', 'Poverty Bomb', 'Blighted Daybreaker',]
 
 def user_start (type):
     user_opt = str.upper(input(f'Please type (x) to randomly select {type} for your trip. '))
@@ -63,8 +63,6 @@ def decide_init (list, selection, list_type, list_verb):
 banner = ('***Powered by Radon Technologies (c) 2022  ****** WELCOME TO THE MARC CHERRIES TRIP PLANNER!****** Powered by Radon Technologies (c) 2022 ***')
 
 print (banner)
-
-
 
 #start of continuous loop to allow user to restart application
 while True:
