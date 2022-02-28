@@ -13,8 +13,6 @@ def user_start (type):
     while user_opt != 'X':
         print('Sorry, not a valid selection')
         user_opt = str.upper((input(f'Please type (x) to randomly select {type} for your trip. ')))
-#I have a strange intuition that this return value is not necessary
-    #return user_opt
 
 def sel_rand (list):
    random_sel = random.randint (0, len(list)-1)
@@ -36,7 +34,6 @@ banner = ('***Powered by Radon Technologies (c) 2022  ****** WELCOME TO THE MARC
 
 print (banner)
 
-#start of continuous loop to allow user to restart application
 while True:
     user_opt = user_start ('a LOCATION')
 
@@ -44,9 +41,6 @@ while True:
     
     loc_res = decide_init(locations, loc_res, 'a LOCATION', 'travelling to')
     
-    #first function starts new section
-    #second function  selects a random option from list and stores it 
-    #third function is a while loop prompting new choices until the user is satisfied
     
     user_opt = user_start ('an EATERY')
     
@@ -71,7 +65,6 @@ while True:
     show_res = decide_init(shows, show_res, 'ENTERTAINMENT', 'enjoying')
 
     
-    
     input('Okay! Looks like you have made some nice selections today.  Let us recap, shall we? Please press ENTER to see a final readout of your selections.  Do not worry! You will have an opportunity to change your selections if needed.  ')
    
     print (f'LOCATION:                           {loc_res}')
@@ -79,25 +72,17 @@ while True:
     print (f'MODE OF TRANSPORTATION:             {mode_res}') 
     print (f'ENTERTAINMENT:                      {show_res}') 
    
-     #I tried but couldnt get a while loop to work here without it affecting the overall loop in a negative way and also had to comment out the else statement. I think it has something to do with the continue statement being in that block of code. If I define a function and call it will it somehow work better? I guess ill try
     restart = str.upper(input('Does everything look good to you?  If you are satisfied with these selections, please type (yes).  If you would like to START OVER, please type (restart)'))
     if restart != 'YES':  
         continue
     else:
         print (f'Congratulations! Your trip is all set. You will be travelling to {loc_res} by way of {mode_res} and chowing down on a fabulous meal at {eat_res}.  But the fun doesnt end there! You will cap the evening off with a private show preformed by none-other-than the legendary {show_res}! Have a great time!')
         break
-    #else:
-     #  print('not a valid selection, please try again')
-      # restart = str.upper(input('Does everything look good to you?  If you are satisfied with these selections, please type (yes).  If you would like to START OVER, please type (restart) '))
+    
 
 
 
- #the app works and does what it needs to do but there are several improvements I would make once I learn more
 
- #first I would make a seperate list for each city having its own restaurants and entertainment options.  This seems simple enough, though a few things I tried ran into problems
 
- #I would also make the option to restart only accept 'x' rather than any character, but this was stifled by my while loop issue on the restart block of code
 
- #I think there is still room to combine parts of code into one of the functions, or maybe even combine the rand_sel function and decide_init function into one
 
- #after testing it looks like if you restart the app it skips over the readout on the second go-around for some reason! need to work on this bug (update: bug fixed, had an epiphany while jogging.  I think a variable was being stored and on the second loop around it was forcing an if statement to evaluate incorrectly.  I simply removed the if statement and let the app continue on)
